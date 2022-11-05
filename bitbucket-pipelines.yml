@@ -10,4 +10,5 @@ pipelines:
             - whoami
             - cat Dockerfile
             - sudo docker ps
+            - sudo docker build -t deepakdocker25/nodeapp:v1 .
           
