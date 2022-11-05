@@ -1,14 +1,19 @@
 pipelines:
   default:
       - step:
+          name: Build
           runs-on:
             - self.hosted
             - linux.shell
           script:
-            - pwd
-            - ls -la
-            - whoami
-            - cat Dockerfile
-            - sudo docker ps
             - sudo docker build -t deepakdocker25/nodeapp:v1 .
+      
+      - step:
+          name: Deploy
+          runs-on:
+            - self.hosted
+            - linux.shell
+          script:
+            - sudo docker login 
+
           
