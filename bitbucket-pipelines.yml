@@ -14,6 +14,6 @@ pipelines:
             - self.hosted
             - linux.shell
           script:
-            - sudo docker login 
+            - sudo docker login -u $uname -p $password
 
           
