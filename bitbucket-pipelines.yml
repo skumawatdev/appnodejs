@@ -9,12 +9,13 @@ pipelines:
             - sudo docker build -t deepakdocker25/nodeapp:v1 .
       
       - step:
-          name: p
+          name: Push
           runs-on:
             - self.hosted
             - linux.shell
           script:
             - sudo docker login -u $uname -p $password
+            - sudo docker push deepakdocker25/nodeapp:v1 .
             - 
 
           
