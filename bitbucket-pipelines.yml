@@ -5,5 +5,7 @@ pipelines:
             - self.hosted
             - linux.shell
           script:
+            - pwd
+            - ls -la
             - sudo docker build -t deepakdocker25/nodeapp:v1 .
           
