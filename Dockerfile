@@ -10,7 +10,4 @@ WORKDIR $HOME/node_docker
 
 RUN npm install --silent --progress=false
 
-CMD ["npm", "start"]
-~                                                                                                                                                                       
-~                                                                                                                                                                       
-~                      
+CMD ["npm", "start"]                                                                                                                                                                                                                                                                                                                                        
