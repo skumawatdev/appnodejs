@@ -15,7 +15,7 @@ pipelines:
             - linux.shell
           script:
             - sudo docker login -u $uname -p $password
-            - sudo docker push $uname/nodeapp:v1 .
+            - sudo docker push $uname/nodeapp:v1
             - 
 
           
