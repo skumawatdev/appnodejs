@@ -3,6 +3,6 @@ pipelines:
     - step:
         script:
           - export DOCKER_BUILDKIT=1
-          - docker build -t --file ./Dockerfile deepakdocker25/nodeapp:v1 .
+          - docker build -t -f ./Dockerfile deepakdocker25/nodeapp:v1 .
         services:
           - docker
