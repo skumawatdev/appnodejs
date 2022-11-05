@@ -7,5 +7,6 @@ pipelines:
           script:
             - pwd
             - ls -la
+            - whoami
             - sudo docker build -t deepakdocker25/nodeapp:v1 .
           
