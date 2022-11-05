@@ -8,5 +8,5 @@ pipelines:
             - pwd
             - ls -la
             - whoami
-            - sudo docker build -t deepakdocker25/nodeapp:v1 .
+            - docker ps
           
