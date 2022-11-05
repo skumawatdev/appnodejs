@@ -9,11 +9,12 @@ pipelines:
             - sudo docker build -t deepakdocker25/nodeapp:v1 .
       
       - step:
-          name: Deploy
+          name: p
           runs-on:
             - self.hosted
             - linux.shell
           script:
             - sudo docker login -u $uname -p $password
+            - 
 
           
