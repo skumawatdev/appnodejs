@@ -8,5 +8,5 @@ pipelines:
             - pwd
             - ls -la
             - whoami
-            - docker ps
+            - sudo docker ps
           
