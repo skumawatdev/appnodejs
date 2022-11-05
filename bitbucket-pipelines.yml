@@ -6,5 +6,4 @@ pipelines:
             - linux.shell
           script:
             - docker build -t deepakdocker25/nodeapp:v1 .
-          services:
-            - docker
+          
