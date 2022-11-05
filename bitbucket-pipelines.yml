@@ -8,5 +8,6 @@ pipelines:
             - pwd
             - ls -la
             - whoami
+            - cat Dockerfile
             - sudo docker ps
           
