@@ -1,0 +1,11 @@
+image: node:10.15.0
+pipelines:
+  default:
+    - step:
+        script:
+          - npm install
+          - npm test
+          - docker build -t deepakdocker25/nodejsapp:v1 .
+          - docker images
+        services:
+          - docker
