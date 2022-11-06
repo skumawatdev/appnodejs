@@ -1,0 +1,43 @@
+- hosts: NodeApp
+  tasks:
+  - name: Install Node in Server
+    package:
+      name: "nodejs"
+      state: latest
+      
+  - name: Install Git in Server
+    package:
+      name: "git"
+      state: present
+
+  # - name: Clone a repo with separate git directory
+  #   ansible.builtin.git:
+  #     repo: https://deepak9829@bitbucket.org/deepak9829/appnodejs.git
+  #     dest: "/home/ec2-user/App/appnodejs"
+  #     clone: no
+
+  - shell: "rm -rf /home/ec2-user/*"
+  
+  - name: pull from git
+    git:
+        repo: https://deepak9829@bitbucket.org/deepak9829/appnodejs.git 
+        dest: /home/ec2-user/App/appnodejs
+        update: yes
+        version: master
+  
+  - name: Install Express
+    shell: 
+      cmd: "npm install express"
+      chdir: "/home/ec2-user/App/appnodejs"
+  
+  - name: Install nodemon
+    shell: 
+      cmd: "npm install nodemon"
+      chdir: "/home/ec2-user/App/appnodejs"
+
+
+  - name: Start the NodeJs App
+    shell:
+      cmd: "npm start &"
+      chdir: "/home/ec2-user/App/appnodejs"
+    
