@@ -1,12 +1,9 @@
 const express = require("express")
-
 const {exec} = require("child_process")
-
-
-
+const cors = require("cors")
 const app = express()
 
-
+app.use(cors())
 
 
 function drun(req, res){
