@@ -12,7 +12,6 @@ RUN npm install cors
 RUN npm install --silent --progress=false
 
 
-
-EXPOSE 3000
+EXPOSE 5000
 
 CMD ["npm", "start"]                                                                                                                                                                                                                                                                                                                                        
